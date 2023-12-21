@@ -1,0 +1,320 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/page_bg"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_margin"
+        android:paddingRight="@dimen/activity_margin" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/search_device"
+            android:textColor="@color/black"
+            android:textSize="@dimen/Title_2" />
+
+        <RelativeLayout
+            android:id="@+id/layout_devicename"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_deviceid"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/select_device_id1"
+                android:textColor="@color/black_50"
+                android:textSize="@dimen/Title_4" />
+
+            <TextView
+                android:id="@+id/tv_devicename"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawablePadding="6dp"
+                android:drawableRight="@drawable/sdk_icon_rightarrow"
+                android:gravity="right"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp"
+                android:textColor="@color/black_50"
+                android:textSize="@dimen/Title_4" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/et_ip"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="4dp"
+                android:layout_weight="3"
+                android:background="@drawable/et_bg"
+                android:gravity="center"
+                android:hint="@string/hint_ip"
+                android:textColor="@color/COLOR_3"
+                android:textColorHint="@color/black_30"
+                android:textSize="@dimen/Title_3" />
+
+            <EditText
+                android:id="@+id/et_port"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/et_bg"
+                android:gravity="center"
+                android:hint="@string/hint_port"
+                android:textColor="@color/COLOR_3"
+                android:textColorHint="@color/black_30"
+                android:textSize="@dimen/Title_3" />
+
+            <Button
+                android:id="@+id/btn_set_net"
+                style="@style/common_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="0dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:text="@string/set_net"
+                android:textSize="@dimen/Title_3" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/et_ssid"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/et_bg"
+                android:gravity="center"
+                android:hint="@string/hint_wifi_name"
+                android:textColor="@color/COLOR_3"
+                android:textColorHint="@color/black_30"
+                android:textSize="@dimen/Title_3" />
+
+            <EditText
+                android:id="@+id/et_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/et_bg"
+                android:gravity="center"
+                android:hint="@string/hint_wifi_pwd"
+                android:textColor="@color/COLOR_3"
+                android:textColorHint="@color/black_30"
+                android:textSize="@dimen/Title_3" />
+
+            <Button
+                android:id="@+id/btn_set_wifi"
+                style="@style/common_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="0dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:text="@string/set_wifi"
+                android:textSize="@dimen/Title_3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/tv_device_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/execute_progress_win_bg"
+                android:focusable="false"
+                android:gravity="center"
+                android:hint="@string/device_cipher_id"
+                android:textColor="@color/COLOR_3"
+                android:textColorHint="@color/black_30"
+                android:textSize="@dimen/Title_3" />
+
+            <Button
+                android:id="@+id/btn_get_device_id"
+                style="@style/common_bt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="0dp"
+                android:layout_weight="1"
+                android:text="@string/obtain_device_id"
+                android:textSize="@dimen/Title_2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/tv_firmware_version"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/et_bg"
+                android:gravity="center"
+                android:hint="@string/firmware_version_number"
+                android:textColor="@color/COLOR_3"
+                android:textColorHint="@color/black_30"
+                android:textSize="@dimen/Title_3" />
+
+            <Button
+                android:id="@+id/btn_upgrade_device"
+                style="@style/common_bt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="0dp"
+                android:layout_weight="1"
+                android:text="@string/fireware_update"
+                android:textSize="@dimen/Title_2" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/et_server_address"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/et_bg"
+            android:hint="@string/hint_server_address"
+            android:lines="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/COLOR_3"
+            android:textSize="@dimen/Title_3" />
+
+        <EditText
+            android:id="@+id/et_token"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/et_bg"
+            android:hint="@string/hint_token"
+            android:lines="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/COLOR_3"
+            android:textSize="@dimen/Title_3" />
+
+        <EditText
+            android:id="@+id/et_channel_id"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/et_bg"
+            android:hint="@string/hint_channel_id"
+            android:lines="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/COLOR_3"
+            android:textSize="@dimen/Title_3" />
+
+        <Button
+            android:id="@+id/btn_connect"
+            style="@style/common_bt"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/connect_server" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/select_position"
+            android:textColor="@color/black"
+            android:textSize="@dimen/Title_2" />
+
+        <RadioGroup
+            android:id="@+id/rg_position"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rb_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/left"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/rb_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="@string/right"
+                android:textColor="@color/black" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_bind_device"
+            style="@style/common_bt"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/bind_device" />
+
+        <Button
+            android:id="@+id/btn_unbind_device"
+            style="@style/common_bt"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/unbind_device" />
+
+        <Button
+            android:id="@+id/btn_device_version"
+            style="@style/common_bt"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="10dp"
+            android:text="查询最新固件信息"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+</ScrollView>
